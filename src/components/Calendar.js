@@ -19,17 +19,17 @@ const Calendar = () => {
       <div class="calendar">
         <MonthIndicator>
           <ChangeMonth onClick={() => setMonth(month - 1)} class="change-month"> - </ChangeMonth>
-          <h3>{ format(new Date(year, month, day), 'MMMM yyyy', { locale: ptBR }) }</h3>
+          <h3>{ format(new Date(year, month, 1), 'MMMM yyyy', { locale: ptBR }) }</h3>
           <ChangeMonth onClick={() => setMonth(month + 1)} class="change-month"> + </ChangeMonth>
         </MonthIndicator>
         <DayOfWeek>
-          <div>Dom</div>
-          <div>Seg</div>
-          <div>Ter</div>
-          <div>Qua</div>
-          <div>Qui</div>
-          <div>Sex</div>
-          <div>Sab</div>
+          <div>D</div>
+          <div>S</div>
+          <div>T</div>
+          <div>Q</div>
+          <div>Q</div>
+          <div>S</div>
+          <div>S</div>
         </DayOfWeek>
         <DateGrid>
           {

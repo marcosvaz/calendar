@@ -7,7 +7,6 @@ export const Grid = styled.div`
 
 export const Main = styled.main`
   max-width: max-content;
-  margin: 3em auto 0 auto;
   padding: 1.5em;
   background-color: #fff;
   border: 2px solid var(--blue-grey-200);
@@ -19,10 +18,12 @@ export const ChangeMonth = styled.button`
   background: none;
   border: 1px solid #ccc;
   border-radius: 50px;
+  cursor: pointer;
   display: flex;
   height: 25px;
   justify-content: center;
   outline: none;
+  user-select: none;
   width: 25px;
 `
 
@@ -38,7 +39,9 @@ export const MonthIndicator = styled.div`
 `
 
 export const DayOfWeek = styled(Grid)`
+  cursor: default;
   margin-top: 1.25em;
+  user-select: none;
 
   & > * {
     font-size: 0.7em;
@@ -57,6 +60,7 @@ export const DateGrid = styled(Grid)`
 export const Day = styled.button`
   position: relative;
   border: 0;
+  cursor: pointer;
   width: 4.5ch;
   height: 4.5ch;
   border-radius: 50%;
